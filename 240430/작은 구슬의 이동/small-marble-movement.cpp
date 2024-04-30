@@ -38,19 +38,21 @@ int main() {
     int y = c;
 
     int dir = changeDir(d);
-    do {
+    int time = 0;
+
+    while(time < t){
         int nx = x + dx[dir];
         int ny = y + dy[dir];
 
         if(!isRange(nx, ny, n)){
-            t--;
             dir = 3 - dir;
         }
         else{
             x = nx;
             y = ny;
         }
-    } while(t--);
+        time++;
+    }
 
     cout << x << " " << y;
     return 0;
