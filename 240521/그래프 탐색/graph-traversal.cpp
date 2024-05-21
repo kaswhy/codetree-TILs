@@ -24,7 +24,8 @@ int main() {
     for(int i = 0; i<n; i++){
         int x, y;
         cin >> x >> y;
-        graph[x].push_back(y); // 여기까지 input
+        graph[x].push_back(y); 
+        graph[y].push_back(x); // 여기까지 input
     }
 
     visited[1] = true;
