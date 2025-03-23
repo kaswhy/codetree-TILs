@@ -19,6 +19,7 @@ void choice(int num) {
         if(rolls[i-1] >= m-1) continue;
 
         rolls[i-1] += nums[num-1];
+        // cout << rolls[i-1] << " " << m-1 << "\n";
         if(rolls[i-1] >= m-1) {
             now++;
         }
@@ -30,6 +31,9 @@ void choice(int num) {
             now--;
         }
     }
+    if(now > max_score) max_score = now;
+        now = 0;
+        return;
 }
 
 int main() {
