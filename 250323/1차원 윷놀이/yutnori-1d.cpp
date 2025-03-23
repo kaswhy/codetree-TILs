@@ -9,21 +9,24 @@ int max_score = 0;
 int now = 0;
 
 void choice(int num) {
-    if(num == n){
+    if(num == n + 1){
         if(now > max_score) max_score = now;
         now = 0;
         return;
     }
 
-    for(int i = 0; i<k; i++){
-        if(rolls[i] >= m-1) continue;
-        rolls[i] += nums[num];
-        if(rolls[i] >= m-1) {
+    for(int i = 1; i<=k; i++){
+        if(rolls[i-1] >= m-1) continue;
+
+        rolls[i-1] += nums[num-1];
+        if(rolls[i-1] >= m-1) {
             now++;
         }
+
         choice(num+1);
-        rolls[i] -= nums[num];
-        if(rolls[i] >= m-1) {
+        
+        rolls[i-1] -= nums[num-1];
+        if(rolls[i-1] >= m-1) {
             now--;
         }
     }
@@ -37,7 +40,7 @@ int main() {
     }
 
 
-    choice(0);
+    choice(1);
     cout << max_score;
 
     return 0;
