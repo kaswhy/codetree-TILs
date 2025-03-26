@@ -19,8 +19,7 @@ int main() {
     // 1번 블록
     for(int i = 0; i<n-1; i++){
         for(int j = 0; j<n-1; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i+1][j] + grid[i+1][j+1]);
+            int now = (grid[i][j] + grid[i+1][j] + grid[i+1][j+1]);
             if(now > max_sum) max_sum = now;
         }
     }
@@ -28,8 +27,7 @@ int main() {
     // 2번 블록
     for(int i = 0; i<n-1; i++){
         for(int j = 0; j<n-1; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i+1][j] + grid[i][j+1]);
+            int now = (grid[i][j] + grid[i+1][j] + grid[i][j+1]);
             if(now > max_sum) max_sum = now;
         }
     }
@@ -37,8 +35,7 @@ int main() {
     // 3번 블록
     for(int i = 0; i<n-1; i++){
         for(int j = 1; j<n; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i+1][j] + grid[i+1][j-1]);
+            int now = (grid[i][j] + grid[i+1][j] + grid[i+1][j-1]);
             if(now > max_sum) max_sum = now;
         }
     }
@@ -46,8 +43,7 @@ int main() {
     // 4번 블록
     for(int i = 0; i<n-1; i++){
         for(int j = 0; j<n-1; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i][j+1] + grid[i+1][j+1]);
+            int now = (grid[i][j] + grid[i][j+1] + grid[i+1][j+1]);
             if(now > max_sum) max_sum = now;
         }
     }
@@ -55,8 +51,7 @@ int main() {
     // 5번 블록
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n-2; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i][j+1] + grid[i][j+2]);
+            int now = (grid[i][j] + grid[i][j+1] + grid[i][j+2]);
             if(now > max_sum) max_sum = now;
         }
     }
@@ -64,8 +59,7 @@ int main() {
     // 6번 블록
     for(int i = 0; i<n-2; i++) {
         for(int j = 0; j<n; j++) {
-            int now = 0;
-            now += (grid[i][j] + grid[i+1][j] + grid[i+2][j]);
+            int now = (grid[i][j] + grid[i+1][j] + grid[i+2][j]);
             if(now > max_sum) max_sum = now;
         }
     }
