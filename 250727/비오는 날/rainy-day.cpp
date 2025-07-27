@@ -14,12 +14,20 @@ int main() {
         cin >> date[i] >> day[i] >> weather[i];
     }
 
+    int last_date = -1;
     for(int i = 0; i < n; i++) {
         if(weather[i] == "Rain") {
-            cout << date[i] << " " << day[i] << " " << weather[i];
-            return 0;
+            if(last_date == -1){
+                last_date = i;
+                continue;
+            }
+            if(date[i] < date[last_date]) {
+                last_date = i;
+            }
         }
     }
+
+    cout << date[last_date] << " " << day[last_date] << " " << weather[last_date];
 
     return 0;
 }
