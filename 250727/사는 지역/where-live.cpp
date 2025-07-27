@@ -32,16 +32,16 @@ int main() {
         person[i] = Person(name, address, region);
     }
 
-    Person answer = person[0];
-    for(int i = 0; i<n-1; i++) {
-        if(person[i].name >= person[i].name) {
-            answer = person[i];
+
+    int last_idx = 0;
+    for(int i = 0; i<n; i++) {
+        if(person[i].name > person[last_idx].name) {
+            last_idx = i;
         }
-        answer = person[i+1];
     }
 
-    cout << "name " << answer.name << "\n";
-    cout << "addr " << answer.address << "\n";
-    cout << "city " << answer.region << "\n";
+    cout << "name " << person[last_idx].name << "\n";
+    cout << "addr " << person[last_idx].address << "\n";
+    cout << "city " << person[last_idx].region << "\n";
 
 }
