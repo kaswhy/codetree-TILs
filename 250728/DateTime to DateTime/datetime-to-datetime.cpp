@@ -13,17 +13,17 @@ int main() {
     // a < 11
     if(a < 11) {
         cout << -1;
-        return;
+        return 0;
     }
     if(a == 11) {
         if(b < 11) {
             cout << -1;
-            return;
+            return 0;
         }
         if(b == 11) {
             if(c < 11) {
                 cout << -1;
-                return;
+                return 0;
             }
         }
     }
