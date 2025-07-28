@@ -41,12 +41,16 @@ int main() {
     sort(people, people + 5, cmpName);
     cout << "name\n";
     for(Person person :  people) {
+        cout << fixed;
+        cout.precision(1);
         cout << person.name << " " << person.height << " " << person.weight << "\n";
     }
 
     sort(people, people + 5, cmpHeight);
     cout << "\nheight\n";
     for(Person person : people) {
+        cout << fixed;
+        cout.precision(1);
         cout << person.name << " " << person.height << " " << person.weight << "\n";
     }
 
