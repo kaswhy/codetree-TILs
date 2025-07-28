@@ -11,6 +11,10 @@ int main() {
 
     int cnt = 0;
     for(int i = m1; i <= m2; i++){
+        if(m1 == m2) {
+            cnt += (d2 - d1 + 1);
+            break;
+        }
         if(i == m1) {
             cnt += (days[i] - d1 + 1);
             continue;
