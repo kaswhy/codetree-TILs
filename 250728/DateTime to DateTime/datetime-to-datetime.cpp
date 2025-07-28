@@ -7,9 +7,25 @@ int a, b, c;
 int main() {
     cin >> a >> b >> c;
 
-    if(a < 11 && b < 11 && c < 11) {
+    // 이전 거를 어케 하지?
+    // a = 11, b = 11, c < 11
+    // a = 11, b < 11
+    // a < 11
+    if(a < 11) {
         cout << -1;
-        return 0;
+        return;
+    }
+    if(a == 11) {
+        if(b < 11) {
+            cout << -1;
+            return;
+        }
+        if(b == 11) {
+            if(c < 11) {
+                cout << -1;
+                return;
+            }
+        }
     }
 
     int d = 11, h = 11, m = 11;
