@@ -50,7 +50,6 @@ int main() {
         cout << person.name << " " << person.height << " " << person.weight << "\n";
     }
 
-    
 
     return 0;
 }
