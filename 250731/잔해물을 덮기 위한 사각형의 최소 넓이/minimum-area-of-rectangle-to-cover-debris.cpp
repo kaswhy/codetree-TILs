@@ -30,6 +30,10 @@ int main() {
         }
     }
 
+    if(row_min == 2001 && row_max == -1 && col_min == 2001 && col_max == -1) {
+        cout << 0;
+        return 0;
+    }
     cout << (row_max - row_min + 1) * (col_max - col_min + 1);
 
     return 0;
