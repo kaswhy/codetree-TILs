@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    int row_min = 2001, row_max = 0, col_min = 2001, col_max = 0;
+    int row_min = 2001, row_max = -1, col_min = 2001, col_max = -1;
     for(int i = 0; i<2001; i++) {
         for(int j = 0; j<2001; j++) {
             if(v[i][j]) {
