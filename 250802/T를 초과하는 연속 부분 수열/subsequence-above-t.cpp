@@ -17,10 +17,6 @@ int main() {
             continue;
         }
 
-        if(i != 0 && (arr[i - 1] >= arr[i])) {
-            tmp = 1;
-            continue;
-        }
         tmp++;
         if(tmp > maxtmp) maxtmp = tmp;
     }
