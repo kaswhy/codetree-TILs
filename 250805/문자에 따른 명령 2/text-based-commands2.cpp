@@ -14,6 +14,7 @@ int main() {
     for(int i = 0; i<dirs.size(); i++) {
         if(dirs[i] == 'L') {
             dir = (dir -1) % 4;
+            if(dir < 0) dir += 4;
             continue;
         }
         if(dirs[i] == 'R') {
