@@ -53,6 +53,7 @@ int main() {
         if(dir == 3) {
             if(nx < 1) {
                 dir = (dir + 2) % 4;
+                continue;
             }
         }
 
