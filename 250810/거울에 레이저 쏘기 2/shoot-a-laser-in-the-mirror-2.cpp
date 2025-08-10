@@ -59,7 +59,7 @@ int main() {
             continue;
         }
         if(grid[x][y] == '\\') {
-            dir = (dir % 2) ? ++dir : --dir;
+            dir = (dir % 2 == 0) ? ++dir : --dir;
             x = x + dx[dir];
             y = y + dy[dir];
             cnt++;
