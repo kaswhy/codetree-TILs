@@ -18,7 +18,7 @@ int main() {
         for(int j = 1; j<C-2; j++) {
             for(int k = i + 1; k<R-1; k++) {
                 for(int m = j + 1; m<C-1; m++) {
-                    if(grid[0][0] != grid[i][j] && grid[i][j] != grid[k][m]) {
+                    if(grid[0][0] != grid[i][j] && grid[i][j] != grid[k][m] && grid[k][m] != grid[R-1][C-1]) {
                         cnt++;
                     }
                 }
