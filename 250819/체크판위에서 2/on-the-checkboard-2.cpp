@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int R, C;
+char grid[15][15];
+
+int main() {
+    cin >> R >> C;
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            cin >> grid[i][j];
+        }
+    }
+
+    int cnt = 0;
+    for(int i = 1; i<R-2; i++) {
+        for(int j = 1; j<C-2; j++) {
+            for(int k = i + 1; k<R-1; k++) {
+                for(int m = j + 1; m<C-1; m++) {
+                    if(grid[0][0] != grid[i][j] && grid[i][j] != grid[k][m]) {
+                        cnt++;
+                    }
+                }
+            }
+        }
+    }
+
+    cout << cnt;
+
+    return 0;
+}
