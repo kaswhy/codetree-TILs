@@ -14,7 +14,7 @@ int main() {
     }
 
     int min_cnt = INT_MAX;
-    for(int i = 0; i<N; i++) {
+    for(int i = 0; i<N-T; i++) {
         int now = 0;
         for(int j = i; j<i + T; j++) {
             now += abs(arr[j] - H);
