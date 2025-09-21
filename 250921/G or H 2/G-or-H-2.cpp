@@ -3,8 +3,8 @@
 using namespace std;
 
 int N;
-int pos[100];
-char alpha[100];
+int pos[101];
+char alpha[101];
 
 int main() {
     cin >> N;
@@ -14,9 +14,9 @@ int main() {
     }
 
     int max_size = 0;
-    for(int i = 0; i < 100; i++) { // 시작점
+    for(int i = 0; i < 101; i++) { // 시작점
         if(alpha[i] != 'H' && alpha[i] !='G') continue;
-        for(int j = i; j<100; j++) { // 끝점
+        for(int j = i; j<101; j++) { // 끝점
             if(alpha[j] != 'H' && alpha[j] != 'G') continue;
             int g = 0, h = 0;
             for (int k = i; k<=j; k++) {
