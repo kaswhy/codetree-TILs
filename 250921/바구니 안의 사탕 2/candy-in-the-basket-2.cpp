@@ -1,31 +1,34 @@
 #include <iostream>
+#include <algorithm>
+
+#define MAX_NUM 100
 
 using namespace std;
 
-int N, k;
-int candy[100];
+int n, k;
+int arr[MAX_NUM + 1];
 
 int main() {
-    cin >> N >> k;
-
-    for (int i = 0; i < N; i++) {
-        int c, p;
-        cin >> c >> p;
-        candy[p] = c;
+    // 입력
+    cin >> n >> k;
+    for(int i = 0; i < n; i++) {
+        int x, a;
+        cin >> a >> x;
+        
+        arr[x] += a;
     }
-
-    int max_cnt = 0;
-    for(int c = k; c<100-k; c++) {
-        int cnt = 0;
-        for(int i = c-k; i<=c+k; i++) {
-            cnt+=candy[i];
-        }
-        if(cnt > max_cnt) {
-            max_cnt = cnt;
-        }
+    
+    int max_sum = 0;
+    for(int i = 0; i <= MAX_NUM; i++) {
+        int sum = 0;
+        for(int j = i - k; j <= i + k; j++)
+            if(j >= 0 && j <= MAX_NUM)
+                sum += arr[j];
+        
+        // 최댓값을 구합니다.
+        max_sum = max(max_sum, sum);
     }
-
-    cout << max_cnt;
-
+                        
+    cout << max_sum;
     return 0;
 }
